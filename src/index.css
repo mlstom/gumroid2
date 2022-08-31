@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
 
 :root {
   --background: #eff7f9;
   --black: #0a0b10;
   --purple: #803bec;
-  --pink: #e5a1f8;
+  --pink: #ff90e8;
+  --zuta:#ffc900;
   --orange:#d16309;
   --org:#ff7f2a;
   --white: #fff;
