@@ -66,7 +66,7 @@ const Header = () => {
                 {!mani &&
                     <motion.p id='meni'  animate={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} exit={{ opacity: 0, rotate: '275deg' }} transition={{ duration: 0.5, delay: 0.25 }} onClick={() => setmani(true)} >
                         <Meni >
-                            <HiMenuAlt1 />
+                            <HiMenuAlt1 width='30px' height="30px" />
                         </Meni>
                     </motion.p>
                 }
@@ -76,7 +76,7 @@ const Header = () => {
                     <OtvMani id='otvmani' initial={{width:0}} animate={{width:'100%'}} transition={{delay:0.5,duration:0.5}}>
                             <Opadajuci id='contotv' initial={{width:0}} animate={{width:'45%'}} transition={{delay:1,duration:0.5}}>
                                 <Close id='close' onClick={()=>setmani(false)} initial={{opacity:0, scale:0}} animate={{opacity:1,scale:1}} transition={{delay:1,duration:0.5}}>
-                                    <AiOutlineClose />
+                                    <AiOutlineClose width='30px' height="30px" />
                                 </Close>
                             </Opadajuci>
                     </OtvMani>
@@ -90,10 +90,10 @@ const Header = () => {
             <Social  >
                 <AnimatePresence>
                     <motion.a href='https://www.instagram.com/' id='instagram' animate={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} exit={{ opacity: 0, transition: { duration: 1, ease: "easeInOut" }, rotate: '275deg' }} whileHover={{ scale: 1.1 }} style={{ color: 'black' }} transition={{ duration: 0.5, delay: 0.75 }} >
-                        <AiOutlineInstagram />
+                        <AiOutlineInstagram width='30px' height="30px" />
                     </motion.a>
                     <motion.a id='twiter' href='https://www.twitter.com' animate={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} exit={{ opacity: 0, transition: { duration: 1, ease: "easeInOut" }, rotate: '275deg' }} whileHover={{ scale: 1.1 }} style={{ color: 'black' }} transition={{ duration: 0.5, delay: 1 }} >
-                        <AiOutlineTwitter />
+                        <AiOutlineTwitter width='30px' height="30px" />
                     </motion.a>
                 </AnimatePresence>
             </Social>
