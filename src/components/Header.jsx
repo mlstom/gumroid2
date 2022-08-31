@@ -70,7 +70,7 @@ const Opadajuci = styled(motion.div)`
     background-color:var(--background);
 
     @media screen and (max-width:800px){
-        width:50%;
+        width:60%;
     }
     
 `
