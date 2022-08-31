@@ -18,7 +18,7 @@ const Main = styled.div`
     bottom:0;
     left:0;
     right:0;
-    z-index:999;
+    z-index:99999;
 
 `
 const Relative = styled.div`
@@ -37,6 +37,7 @@ const Social = styled(motion.div)`
     gap:10px;
     @media screen and (max-width:800px){
         font-size:30px;
+        transform:scale(0.75)
     }
 `
 const Meni = styled.div`
@@ -49,6 +50,7 @@ const Meni = styled.div`
     }
     @media screen and (max-width:800px){
         font-size:30px;
+        transform:scale(0.75)
     }
 `
 const OtvMani = styled(motion.div)`

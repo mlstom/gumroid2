@@ -77,7 +77,7 @@ position:absolute;
 z-index:3;
 left:13%;
 @media screen and (max-width:800px){
-    left:55%;
+    left:35%;
 }
 
 
