@@ -42,6 +42,8 @@ const Social = styled(motion.div)`
 const Meni = styled.div`
     font-size:30px;
     cursor:pointer;
+    width:40px;
+    height:40px;
     &:hover{
         transform:scale(1.1)
     }

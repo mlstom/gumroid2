@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import wave from "../assets/wave1.png"
+import blob from '../assets/blob orange.png'
 const Main = styled.div`
     height:100vh;
     width:100vw;
@@ -21,6 +22,10 @@ const Pink = styled.div`
     height:100%;
     width:40%;
     position:absolute;
+    img{
+        width:400px;
+        height:400px;
+    }
     
 `
 const Zuta = styled.div`
@@ -31,7 +36,7 @@ const Hero = () => {
     return (
         <Main>
             <Pink>
-
+                <img src={blob} alt='white blob' />
             </Pink>
             <img src={wave}  alt='wave' />
             <Zuta>
