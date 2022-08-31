@@ -21,11 +21,19 @@ const Social = styled(motion.div)`
     display:flex;
     font-size:30px;
     gap:10px;
-
+    @media screen and (max-width:800px){
+        font-size:15px;
+    }
 `
 const Meni = styled.div`
     font-size:30px;
     cursor:pointer;
+    &:hover{
+        transform:scale(1.1)
+    }
+    @media screen and (max-width:800px){
+        font-size:15px;
+    }
 `
 const OtvMani = styled(motion.div)`
     height:100vh;
@@ -50,7 +58,7 @@ const Header = () => {
         <Main>
             <AnimatePresence >
                 {!mani &&
-                    <motion.p id='meni' whileHover={{ scale: 1.1 }} animate={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} exit={{ opacity: 0, rotate: '275deg' }} transition={{ duration: 0.5, delay: 0.25 }} onClick={() => setmani(true)} >
+                    <motion.p id='meni'  animate={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} exit={{ opacity: 0, rotate: '275deg' }} transition={{ duration: 0.5, delay: 0.25 }} onClick={() => setmani(true)} >
                         <Meni >
                             <HiMenuAlt1 />
                         </Meni>
