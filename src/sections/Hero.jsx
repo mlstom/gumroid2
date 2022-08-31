@@ -62,7 +62,7 @@ flex-direction:column;
 justify-content:center;
 align-items:center;
 @media screen and (max-width:800px){
-    z-index:99999;
+    z-index:999;
 }
 `
 const Text = styled.p`
@@ -86,9 +86,9 @@ left:13%;
 const Hero = () => {
     return (
         <Main>
-            <Left initial={{ scale: 0 }} animate={{
-                scale: 1
-            }} transition={{ duration: 0.5 }}>
+            <Left initial={{ scale: 0,opacity:0 }} animate={{
+                scale: 1,opacity:1
+            }} transition={{ duration: 0.5 , delay:1}}>
                 <Covek animate={{ x: [null, 20, 0] }} initial={{ x: 0 }} transition={{
                     duration: 1, ease: "easeInOut",
                     times: [0, 0.2, 0.5, 0.8, 1],
@@ -97,7 +97,9 @@ const Hero = () => {
                 }} >
                     <img src={covek} width='100' height='100' alt='covek' />
                 </Covek>
-                <Pink>
+                <Pink initial={{ width:0 }} animate={{
+                width:"40%"
+            }} transition={{ duration: 0.75 , delay:0.25}} >
                     <img src={blob} alt='white blob' />
                 </Pink>
                 <img src={wave} alt='wave' />
