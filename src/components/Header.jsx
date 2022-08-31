@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import { AiOutlineInstagram, AiOutlineTwitter,AiOutlineClose } from 'react-icons/ai'
 import { HiMenuAlt1 } from 'react-icons/hi'
 import { motion, AnimatePresence } from 'framer-motion'
 import { useStateContext } from '../context/StateContext'
@@ -52,6 +52,9 @@ const Opadajuci = styled(motion.div)`
     background-color:var(--background);
     
 `
+const Close = styled(motion.div)`
+
+`
 const Header = () => {
     const { mani, setmani } = useStateContext()
     return (
@@ -69,7 +72,9 @@ const Header = () => {
                 <div>
                     <OtvMani id='otvmani' initial={{width:0}} animate={{width:'100%'}} transition={{delay:0.5,duration:0.5}}>
                             <Opadajuci id='contotv' initial={{width:0}} animate={{width:'45%'}} transition={{delay:1,duration:0.5}}>
-                                <motion.p id='close' onClick={()=>setmani(false)}>X</motion.p>
+                                <Close id='close' onClick={()=>setmani(false)}>
+                                    <AiOutlineClose />
+                                </Close>
                             </Opadajuci>
                     </OtvMani>
                 </div>
