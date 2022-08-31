@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import wave from "../assets/wave1.png"
-import blob from '../assets/blob orange.png'
+import blob from '../assets/blop orange2.png'
 const Main = styled.div`
     height:100vh;
     width:100vw;
@@ -23,9 +23,19 @@ const Pink = styled.div`
     width:40%;
     position:absolute;
     img{
-        width:400px;
-        height:400px;
+        width:700px;
+        height:700px;
+        left:0;
+        top:15%;
+        position:absolute;
+        z-index:99;
+        @media screen and (max-width:800px){
+            width:500px;
+            height:500px;
+            left:0;
+        }
     }
+
     
 `
 const Zuta = styled.div`

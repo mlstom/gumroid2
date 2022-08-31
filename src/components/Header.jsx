@@ -36,7 +36,7 @@ const Social = styled(motion.div)`
     font-size:30px;
     gap:10px;
     @media screen and (max-width:800px){
-        font-size:15px;
+        font-size:30px;
     }
 `
 const Meni = styled.div`
@@ -48,7 +48,7 @@ const Meni = styled.div`
         transform:scale(1.1)
     }
     @media screen and (max-width:800px){
-        font-size:15px;
+        font-size:30px;
     }
 `
 const OtvMani = styled(motion.div)`
