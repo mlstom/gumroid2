@@ -12,6 +12,7 @@ const Main = styled.div`
     justify-content:space-between;
     align-items:center;
     height:30px;
+    padding:20px 10px;
 `
 const Logo = styled(motion.div)`
     text-transform: uppercase;
@@ -54,7 +55,8 @@ const Opadajuci = styled(motion.div)`
     
 `
 const Close = styled(motion.div)`
-
+    width:40px;
+    height:40px;
 `
 const Header = () => {
     const { mani, setmani } = useStateContext()
@@ -73,7 +75,7 @@ const Header = () => {
                 <div>
                     <OtvMani id='otvmani' initial={{width:0}} animate={{width:'100%'}} transition={{delay:0.5,duration:0.5}}>
                             <Opadajuci id='contotv' initial={{width:0}} animate={{width:'45%'}} transition={{delay:1,duration:0.5}}>
-                                <Close id='close' onClick={()=>setmani(false)}>
+                                <Close id='close' onClick={()=>setmani(false)} initial={{opacity:0, scale:0}} animate={{opacity:1,scale:1}} transition={{delay:1,duration:0.5}}>
                                     <AiOutlineClose />
                                 </Close>
                             </Opadajuci>
