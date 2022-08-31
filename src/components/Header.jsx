@@ -11,6 +11,7 @@ const Main = styled.div`
     display:flex;
     justify-content:space-between;
     align-items:center;
+    height:30px;
 `
 const Logo = styled(motion.div)`
     text-transform: uppercase;
