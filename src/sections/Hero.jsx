@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import wave from "../assets/wave1.png"
 import blob from '../assets/figure.png'
 import covek from '../assets/covek1.png'
+import orgblob from '../assets/blop orange2.png'
 
 const Main = styled.div`
     height:100vh;
@@ -82,13 +83,25 @@ left:13%;
 
 
 `
+const Orange = styled.div`
+    z-index:2;
+    width:700px;
+    height:700px;
+    transform:scaleX(2);
+    right:60%;
+    top:15%;
+    position:absolute;
+    @media screen and (max-width:800px){
+       display:none;
+    }
+`
 
 const Hero = () => {
     return (
         <Main>
-            <Left initial={{ scale: 0,opacity:0 }} animate={{
-                scale: 1,opacity:1
-            }} transition={{ duration: 0.5 , delay:1}}>
+            <Left initial={{ scale: 0, opacity: 0 }} animate={{
+                scale: 1, opacity: 1
+            }} transition={{ duration: 0.5, delay: 1 }}>
                 <Covek animate={{ x: [null, 20, 0] }} initial={{ x: 0 }} transition={{
                     duration: 1, ease: "easeInOut",
                     times: [0, 0.2, 0.5, 0.8, 1],
@@ -97,11 +110,14 @@ const Hero = () => {
                 }} >
                     <img src={covek} width='100' height='100' alt='covek' />
                 </Covek>
-                <Pink initial={{ width:0 }} animate={{
-                width:"40%"
-            }} transition={{ duration: 0.75 , delay:0.25}} >
+                <Pink initial={{ width: 0 }} animate={{
+                    width: "40%"
+                }} transition={{ duration: 0.75, delay: 0.25 }} >
                     <img src={blob} alt='white blob' />
                 </Pink>
+                <Orange>
+                    <img src={orgblob} alt='bg' />
+                </Orange>
                 <img src={wave} alt='wave' />
             </Left>
             <Right>

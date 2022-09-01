@@ -63,14 +63,17 @@ const OtvMani = styled(motion.div)`
     left:0;
     right:0;
     background-color: rgba(0, 0, 0, 0.7);
+    z-index:99;
 `
 const Opadajuci = styled(motion.div)`
     width:45%;
+    position:absolute;
+    z-index:999;
     height:100vh;
     background-color:var(--background);
 
     @media screen and (max-width:800px){
-        width:60%;
+        width:100%;
     }
     
 `
@@ -91,8 +94,8 @@ const Header = () => {
                 <AnimatePresence >
                     {!mani &&
                         <motion.p id='meni' animate={{ opacity: 1, scale: 1 }} initial={{ opacity: 0, scale: 0 }} exit={{ opacity: 0, rotate: '275deg' }} transition={{ duration: 0.5, delay: 0.25 }} onClick={() => setmani(true)} >
-                            <Meni >
-                                <HiMenuAlt1 width='30px' height="30px" />
+                            <Meni id='provera' >
+                                <HiMenuAlt1 id='kk' width='30px' height="30px" />
                             </Meni>
                         </motion.p>
                     }
